@@ -20,7 +20,7 @@ export default function Home() {
       });
   }
   return (
-    <div className='flex flex-col justify-center items-center p-5 bg-slate-700 h-screen'>
+    <div className='flex flex-col justify-start items-center p-5 pt-8 bg-slate-700 h-screen'>
       <div className="text-3xl font-semibold m-8">
         許群佑<br></br>
         給我照片!!
