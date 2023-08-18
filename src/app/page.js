@@ -17,6 +17,7 @@ export default function Home() {
       .then((result) => {
         router.push('/success')
       }, (error) => {
+        document.getElementById('btn').disabled = false;
         console.log(error.text);
       });
   }
