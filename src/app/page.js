@@ -12,6 +12,7 @@ export default function Home() {
 
     console.log(name)
     const msg = { name, place, tosay };
+    document.getElementById('btn').disabled = true;
     await emailjs.send('service_5n98ui8', 'template_kuy8zeh', msg, 'Ax8ie4YfPfX8l9z78')
       .then((result) => {
         router.push('/success')
@@ -39,7 +40,7 @@ export default function Home() {
           <label htmlFor="place" className="peer-focus:font-medium absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">其他想說的 (Optional)</label>
         </div>
 
-        <button type="submit" onClick={sendEmail} className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">給我！</button>
+        <button id='btn' type="submit" onClick={sendEmail} className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">給我！</button>
       </div>
 
     </div>
