@@ -13,7 +13,7 @@ export default function Home() {
     console.log(name)
     const msg = { name, place, tosay };
     document.getElementById('btn').disabled = true;
-    await emailjs.send('service_5n98ui8', 'template_kuy8zeh', msg, 'Ax8ie4YfPfX8l9z78')
+    await emailjs.send('service_247zntp', 'template_kuy8zeh', msg, 'Ax8ie4YfPfX8l9z78')
       .then((result) => {
         router.push('/success')
       }, (error) => {
